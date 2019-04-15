@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  money: 1
+  bio: MyText
+  party_id: 1
+  inventory_id: 1
+
+two:
+  name: MyString
+  money: 1
+  bio: MyText
+  party_id: 1
+  inventory_id: 1
