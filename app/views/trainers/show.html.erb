@@ -1,0 +1,4 @@
+<h1> Trainer: <%= @trainer.name %> </h1>
+<p> Bio: <%= @trainer.bio %> <p>
+
+<p> Owned Pokemon: <%= link_to @trainer.wild_pokemons.map {|pokemon| pokemon.name}.join(", "), wild_pokemon_path(@trainer.wild_pokemons.ids) %></p>
