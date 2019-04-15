@@ -1,0 +1,5 @@
+<h1>All Trainers</h1>
+<li> <% @trainers.each do |trainer| %>
+<%= link_to trainer.name, trainer_path(trainer) %>
+<% end %>
+</li>
