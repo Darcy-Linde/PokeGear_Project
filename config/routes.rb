@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :trainers
+  resources :owned_pokemons, only: [:edit, :update, :delete, :destroy]
+  resources :wild_pokemons, only: [:index, :show]
+  resources :battles, only: [:show]
+  resources :gyms, only: [:index, :show]
 end
