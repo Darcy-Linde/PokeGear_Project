@@ -16,7 +16,7 @@ def get_description(id)
   end
 end
 
-def seed_wild_pokemon_table
+def seed_wild_pokemons_table
   151.times do |i|
     index = i + 1
     pokemon = get_pokemon_data(index)
@@ -33,6 +33,21 @@ def seed_wild_pokemon_table
       weight: weight,
       img: image,
       description: description
+    )
+  end
+end
+
+def seed_gyms_table(hash)
+  hash.each do |key, value|
+    Gym.create(
+      name: value[:name],
+      badge_name: value[:badge_name],
+      badge_img: value[:badge_img],
+      leader_name: value[:leader_name],
+      leader_img: value[:leader_img],
+      before_quote: value[:before_quote],
+      after_quote: value[:after_quote],
+      number_of_questions: value[:number_of_questions]
     )
   end
 end

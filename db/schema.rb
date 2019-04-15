@@ -22,11 +22,12 @@ ActiveRecord::Schema.define(version: 2019_04_15_180937) do
 
   create_table "gyms", force: :cascade do |t|
     t.string "name"
-    t.string "gym_img"
     t.string "badge_name"
     t.string "badge_img"
     t.string "leader_name"
     t.string "leader_img"
+    t.text "before_quote"
+    t.text "after_quote"
     t.integer "number_of_questions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
