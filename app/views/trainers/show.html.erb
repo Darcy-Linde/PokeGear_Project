@@ -1,4 +1,58 @@
-<h1> Trainer: <%= @trainer.name %> </h1>
-<p> Bio: <%= @trainer.bio %> <p>
+<body>
+  <div class="container">
+    <section class="hero is-small has-background-white	">
+      <div class="hero-body">
+          <h1 class="title has-text-black">
+            Pokemon Trainer <%= @trainer.name %>
+          </h1>
+      </div>
+    </section>
 
-<p> Owned Pokemon: <%= link_to @trainer.wild_pokemons.map {|pokemon| pokemon.name}.join(", "), wild_pokemon_path(@trainer.wild_pokemons.ids) %></p>
+   <nav class="navbar">
+     <div class="navbar-left">
+       <div class="navbar-item">
+         <div class="buttons">
+           <a class="button is-success">
+             <strong>Play</strong>
+           </a>
+         </div>
+       </div>
+     </div>
+
+     <div class="navbar-center">
+       <div class="navbar-item">
+         <div class="buttons">
+           <a class="button is-info">
+             <strong>See Caught Pokemon</strong>
+           </a>
+         </div>
+       </div>
+     </div>
+
+     <div class="navbar-end">
+       <div class="navbar-item">
+         <div class="buttons">
+           <a class="button is-light">
+             Log Out
+           </a>
+          </div>
+        </div>
+     </div>
+   </nav>
+
+   <section class="section">
+   </section>
+   <section class="section">
+   </section>
+
+   <div class="columns">
+    <div class="column">
+      <strong>Pokedex Count: </strong>
+    </div>
+    <div class="column">
+      <img src="<%= @trainer.profile_img %>">
+    </div>
+  </div>
+
+  </div>
+</body>
