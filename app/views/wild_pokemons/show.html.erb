@@ -1,1 +1,45 @@
+<section class="hero is-small is-danger">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-white">
+        <%= @wild_pokemon.name.capitalize %>
+      </h1>
+    </div>
+  </div>
+</section>
 
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+    <div class="column">
+      <img src=<%= @wild_pokemon.img %>>
+    </div>
+    <div class="column has-text-black">
+      <strong><%= @wild_pokemon.description %></strong>
+    </div>
+  </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="columns">
+      <div class="column is-6">
+      </div>
+        <div class="column has-text-black is-3">
+          Height: <%= @wild_pokemon.height %>
+        </div>
+        <div class="column has-text-black is-3">
+          Weight: <%= @wild_pokemon.weight %>
+        </div>
+    </div>
+  </section>
+</body>
+
+<footer class="footer">
+  <div class="content">
+    <p>
+      Return to <%= link_to "Pokedex", wild_pokemons_path %>
+    </p>
+  </div>
+</footer>
