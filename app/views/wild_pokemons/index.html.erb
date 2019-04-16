@@ -1,0 +1,17 @@
+<h1 class="title is-1">Pokedex</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Pokemon</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @wild_pokemons.each do |pokemon| %>
+    <tr>
+      <td class="is-vertical-center"><%= pokemon.pokedex_index %></td>
+      <td><%= link_to pokemon.name.capitalize, wild_pokemon_path(pokemon) %></td>
+      <td><img src=<%= pokemon.img %> height="70" width="70"></td>
+    </tr>
+  <% end %>
+</table>
