@@ -1,3 +1,18 @@
+<h2> Create Account </h2>
+<%= form_tag '/trainers/new', method: :post do%>
+ <div>
+  <%= label_tag :user_name%>
+  <%= text_field_tag :user_name%>
+ </div>
+ <div>
+  <%= label_tag :password%>
+  <%= text_field_tag :password%>
+ </div>
+
+<%= submit_tag 'Sign Up', class: 'btn btn-default'%>
+<%end%>
+
+
 <div class="container">
   <section class="hero is-small has-background-light">
     <div class="hero-body">

@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_180937) do
   create_table "trainers", force: :cascade do |t|
     t.string "name"
     t.text "bio"
+    t.string "password_digest"
     t.string "profile_img"
     t.integer "num_badges"
     t.datetime "created_at", null: false

@@ -16,6 +16,7 @@ class TrainersController < ApplicationController
     end
     @trainer.num_badges = 0
     if @trainer.save
+      session[:user_id] = user.id
       redirect_to @trainer
     else
       render :new
