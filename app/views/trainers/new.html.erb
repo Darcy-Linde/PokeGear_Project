@@ -1,9 +1,37 @@
-<h1>Create A New Trainer</h1>
+<div class="container">
+  <section class="hero is-small has-background-light">
+    <div class="hero-body">
+        <h1 class="title has-text-black">
+          Create A New Trainer
+        </h1>
+    </div>
+  </section>
 
   <%= form_for @trainer do |f| %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-		<%= f.label :bio %>
-		<%= f.text_field :bio %>
-	  <%= f.submit %>
+    <div>
+      <%= f.label :name %>
+      <div class="control">
+          <input class="input" type=<%= f.text_field :name %>
+      </div>
+    </div>
+    <div>
+      <%= f.label :bio %>
+      <div class="control">
+          <input class="input" type=<%= f.text_field :bio %>
+      </div>
+    </div>
+    <div class="section">
+      <%= f.label "Select your profile image" %>
+      <%= f.select :profile_img, ['Boy', 'Girl']%>
+    </div>
+
+    <div>
+      <img src="https://archives.bulbagarden.net/media/upload/c/ca/Spr_FRLG_Red.png">
+      <img src="https://archives.bulbagarden.net/media/upload/2/2b/Spr_FRLG_Leaf.png">
+    </div>
+
+    <div class="section">
+      <%= f.submit %>
+    </div>
   <% end %>
+</div>
