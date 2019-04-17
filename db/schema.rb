@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_180937) do
+ActiveRecord::Schema.define(version: 2019_04_17_154531) do
 
   create_table "battles", force: :cascade do |t|
     t.string "trainer_id"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 2019_04_15_180937) do
     t.text "bio"
     t.string "profile_img"
     t.integer "num_badges"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trivia", force: :cascade do |t|
+    t.string "difficulty"
+    t.string "question"
+    t.string "correct_answer"
+    t.string "incorrect_answer_1"
+    t.string "incorrect_answer_2"
+    t.string "incorrect_answer_3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

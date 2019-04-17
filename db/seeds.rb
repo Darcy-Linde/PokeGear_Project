@@ -5,6 +5,7 @@ Gym.delete_all
 OwnedPokemon.delete_all
 Battle.delete_all
 WildPokemon.delete_all
+Trivium.delete_all
 
 gyms_hash = {
   gym_1: {
@@ -89,6 +90,7 @@ gyms_hash = {
   }
 }
 
+seed_trivia_table
 seed_gyms_table(gyms_hash)
 seed_wild_pokemons_table
 WildPokemon.create(

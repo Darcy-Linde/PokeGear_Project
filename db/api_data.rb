@@ -51,3 +51,40 @@ def seed_gyms_table(hash)
     )
   end
 end
+
+def get_easy_trivia
+  data = RestClient.get("https://opentdb.com/api.php?amount=25&category=18&difficulty=easy&type=multiple")
+  data_hash = JSON.parse(data)
+  data_array = data_hash["results"]
+end
+
+def get_medium_trivia
+  data = RestClient.get("https://opentdb.com/api.php?amount=25&category=18&difficulty=medium&type=multiple")
+  data_hash = JSON.parse(data)
+  data_array = data_hash["results"]
+end
+
+def get_hard_trivia
+  data = RestClient.get("https://opentdb.com/api.php?amount=15&category=18&difficulty=hard&type=multiple")
+  data_hash = JSON.parse(data)
+  data_array = data_hash["results"]
+end
+
+def create_trivia(array_of_hashes)
+  array_of_hashes.each do |hash|
+  Trivium.create(
+    difficulty: hash["difficulty"],
+    question: hash["question"],
+    correct_answer: hash["correct_answer"],
+    incorrect_answer_1: hash["incorrect_answers"][0],
+    incorrect_answer_2: hash["incorrect_answers"][1],
+    incorrect_answer_3: hash["incorrect_answers"][2]
+  )
+  end
+end
+
+def seed_trivia_table
+  create_trivia(get_easy_trivia)
+  create_trivia(get_medium_trivia)
+  create_trivia(get_hard_trivia)
+end
