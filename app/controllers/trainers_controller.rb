@@ -16,7 +16,7 @@ class TrainersController < ApplicationController
     end
     @trainer.num_badges = 0
     if @trainer.save
-      session[:user_id] = user.id
+
       redirect_to @trainer
     else
       render :new
@@ -49,7 +49,7 @@ class TrainersController < ApplicationController
   private
 
   def trainer_params
-    params.require(:trainer).permit(:name, :bio, :profile_img)
+    params.require(:trainer).permit(:name, :bio, :profile_img, :password)
   end
 
 end

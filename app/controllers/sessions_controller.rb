@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @trainer = Trainer.find_by(username: params[:username])
+    @trainer = Trainer.find_by(name: params[:name])
     if @trainer && @trainer.authenticate(params[:password])
       session[:user_id] = @trainer.id
-      redirect_to root_path
+      redirect_to trainer_path(@trainer)
     else
       @error = "Invalid Username or Password"
       render :new

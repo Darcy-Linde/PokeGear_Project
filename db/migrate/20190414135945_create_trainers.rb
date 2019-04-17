@@ -6,7 +6,7 @@ class CreateTrainers < ActiveRecord::Migration[5.2]
       t.string :password_digest
       t.string :profile_img
       t.integer :num_badges
-
+      
       t.timestamps
     end
   end
