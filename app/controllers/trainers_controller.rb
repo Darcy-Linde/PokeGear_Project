@@ -16,7 +16,6 @@ class TrainersController < ApplicationController
     end
     @trainer.num_badges = 0
     if @trainer.save
-
       redirect_to @trainer
     else
       render :new

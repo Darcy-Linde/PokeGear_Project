@@ -1,13 +1,12 @@
 class OwnedPokemonsController < ApplicationController
 
-  def edit
+  def show
   end
 
-  def update
+  def new
   end
 
-  def delete
+  def create
   end
-  
 
 end
