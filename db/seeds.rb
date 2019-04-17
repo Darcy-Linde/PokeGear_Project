@@ -91,9 +91,16 @@ gyms_hash = {
 
 seed_gyms_table(gyms_hash)
 seed_wild_pokemons_table
+WildPokemon.create(
+  pokedex_index: 0,
+  img: "https://projectpokemon.org/home/uploads/monthly_2017_07/missingno.png.4bc4f1920385390a41f267dd8f15b2ed.png",
+  name: "???",
+  height: 0,
+  weight: 0,
+  description: "You haven't caught this Pokemon yet! No data available."
+ )
 
-
-trainer = Trainer.create(name: "Darcy", bio: "Young trainer looking for adventure!")
-trainer_poke = OwnedPokemon.create(wild_pokemon_id: WildPokemon.first.id, trainer_id: trainer.id, nick_name: "Vine Whip and Nae Nae")
-gym = Gym.first
-first_gym_battle = Battle.create(trainer_id: trainer.id, gym_id: gym.id, victory: true)
+# trainer = Trainer.create(name: "Darcy", bio: "Young trainer looking for adventure!")
+# trainer_poke = OwnedPokemon.create(wild_pokemon_id: WildPokemon.first.id, trainer_id: trainer.id, nick_name: "Vine Whip and Nae Nae")
+# gym = Gym.first
+# first_gym_battle = Battle.create(trainer_id: trainer.id, gym_id: gym.id, victory: true)

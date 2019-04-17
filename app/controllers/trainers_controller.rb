@@ -10,6 +10,7 @@ class TrainersController < ApplicationController
   def create
     @trainer = Trainer.new(trainer_params)
     @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/e/e8/Spr_HGSS_Red.png"
+    @trainer.num_badges = 8
     if @trainer.save
       redirect_to @trainer
     else

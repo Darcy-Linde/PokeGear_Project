@@ -1,6 +1,6 @@
 <body>
   <div class="container">
-    <section class="hero is-small has-background-white	">
+    <section class="hero is-small has-background-light">
       <div class="hero-body">
           <h1 class="title has-text-black">
             Pokemon Trainer <%= @trainer.name %>
@@ -8,22 +8,33 @@
       </div>
     </section>
 
+<div class="container">
+  <section>
    <nav class="navbar">
      <div class="navbar-left">
        <div class="navbar-item">
          <div class="buttons">
            <a class="button is-success">
-             <strong>Play</strong>
+             <strong>Catch Pokemon</strong>
            </a>
          </div>
        </div>
      </div>
 
-     <div class="navbar-center">
+     <nav class="navbar">
+         <div class="navbar-item">
+           <div class="buttons">
+             <a class="button is-warning">
+               <strong>Challenge Gym</strong>
+             </a>
+           </div>
+       </div>
+
+     <div class="navbar">
        <div class="navbar-item">
          <div class="buttons">
            <a class="button is-info">
-             <strong>See Caught Pokemon</strong>
+             <strong>See <%= @trainer.name %>'s Pokedex</strong>
            </a>
          </div>
        </div>
@@ -39,20 +50,30 @@
         </div>
      </div>
    </nav>
-
-   <section class="section">
-   </section>
-   <section class="section">
-   </section>
-
-   <div class="columns">
-    <div class="column">
-      <strong>Pokedex Count: </strong>
-    </div>
-    <div class="column">
-      <img src="<%= @trainer.profile_img %>">
-    </div>
+  </section>
   </div>
+
+
+  <div class="container">
+    <section>
+      <div class="columns">
+       <div class="column is-3">
+         <strong>Trainer Bio: </strong>
+         <%= @trainer.bio %>
+       </div>
+       <div class="column">
+         <img src="<%= @trainer.profile_img %>">
+       </div>
+     </div>
+    </section>
+  </div>
+
+
+  <footer class="footer">
+   <% @trainer.num_badges.times do |i| %>
+     <img src="<%= Gym.find(i+1).badge_img %>">
+   <% end %>
+  </footer>
 
   </div>
 </body>

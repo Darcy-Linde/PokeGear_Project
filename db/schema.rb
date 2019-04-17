@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_180937) do
     t.string "name"
     t.text "bio"
     t.string "profile_img"
+    t.integer "num_badges"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

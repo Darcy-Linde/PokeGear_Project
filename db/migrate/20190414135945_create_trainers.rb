@@ -4,6 +4,7 @@ class CreateTrainers < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :bio
       t.string :profile_img
+      t.integer :num_badges
 
       t.timestamps
     end
