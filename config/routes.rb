@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :trainers
-  resources :owned_pokemons, only: [:show, :new, :create]
+  resources :owned_pokemons, only: [:index, :new, :create]
   resources :wild_pokemons, only: [:index, :show]
   resources :battles, only: [:show]
   resources :gyms, only: [:index, :show]
