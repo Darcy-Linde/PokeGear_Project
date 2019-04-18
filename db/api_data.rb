@@ -3,7 +3,7 @@ require 'json'
 
 def get_pokemon_data(id)
   data = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{id}")
-  data_hash = JSON.parse(data)
+  JSON.parse(data)
 end
 
 def get_description(id)

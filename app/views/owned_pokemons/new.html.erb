@@ -5,7 +5,7 @@
 
   <%= form_for @pokemon do |f| %>
     <div class="section">
-      <%= f.label "Catch #{@wild_pokemon.name.capitalize}?" %>
+      <%= f.label "Catch #{@wild_pokemon.name}?" %>
       <div>
         <%= f.select :nick_name, ['Yes', 'No'] %>
       </div>
