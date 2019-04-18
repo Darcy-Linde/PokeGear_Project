@@ -19,7 +19,7 @@ class TrainersController < ApplicationController
     end
     @trainer.num_badges = 0
     if @trainer.save
-      redirect_to @trainer
+      redirect_to login_path
     else
       render :new
     end
