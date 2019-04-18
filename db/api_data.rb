@@ -3,7 +3,7 @@ require 'json'
 
 def get_pokemon_data(id)
   data = RestClient.get("https://pokeapi.co/api/v2/pokemon/#{id}")
-  data_hash = JSON.parse(data)
+  JSON.parse(data)
 end
 
 def get_description(id)
@@ -40,6 +40,7 @@ end
 def seed_gyms_table(hash)
   hash.each do |key, value|
     Gym.create(
+      index: value[:index],
       name: value[:name],
       badge_name: value[:badge_name],
       badge_img: value[:badge_img],

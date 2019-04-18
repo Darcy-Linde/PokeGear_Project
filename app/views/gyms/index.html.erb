@@ -1,0 +1,40 @@
+<div class="container">
+  <section class="hero is-small has-background-warning	">
+    <div class="hero-body">
+        <h1 class="title has-text-black">
+          Welcome to <%= @gym.name %>
+        </h1>
+    </div>
+  </section>
+
+  <section>
+    <strong><%= @gym.before_quote %></strong>
+  </section>
+  <section>
+    Answer <%= @gym.number_of_questions %> questions correctly to win!
+  </section>
+
+  <section>
+    <strong><%= Trainer.find(current_user.id).name %></strong>
+    <img src="<%= Trainer.find(current_user.id).profile_img %>">
+    <strong>V.S.</strong>
+    <img src="<%= @gym.leader_img %>">
+    <strong><%= @gym.leader_name %></strong>
+  </section>
+  <section>
+    <div class="columns">
+      <div class="column">
+        First column
+      </div>
+      <div class="column">
+        Second column
+      </div>
+      <div class="column">
+        Third column
+      </div>
+      <div class="column">
+        Fourth column
+      </div>
+    </div>
+  </div>
+  </section>

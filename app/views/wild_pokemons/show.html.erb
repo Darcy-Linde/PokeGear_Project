@@ -39,7 +39,10 @@
 <footer class="footer">
   <div class="content">
     <p>
-      Return to <%= link_to "Pokedex", wild_pokemons_path %>
+      <%= link_to "Trainer Page", trainer_path(current_user.id) %>
+    </p>
+    <p>
+      <%= link_to "Pokedex", owned_pokemons_path %>
     </p>
   </div>
 </footer>

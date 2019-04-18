@@ -14,7 +14,7 @@
      <div class="navbar-left">
        <div class="navbar-item">
          <div class="buttons">
-           <a class="button is-success">
+           <a href="/owned_pokemons/new" class="button is-success">
              <strong>Catch Pokemon</strong>
            </a>
          </div>
@@ -24,7 +24,7 @@
      <nav class="navbar">
          <div class="navbar-item">
            <div class="buttons">
-             <a class="button is-warning">
+             <a href="/gyms/" class="button is-warning">
                <strong>Challenge Gym</strong>
              </a>
            </div>
@@ -33,7 +33,7 @@
      <div class="navbar">
        <div class="navbar-item">
          <div class="buttons">
-           <a class="button is-info">
+           <a href="/owned_pokemons/" class="button is-info">
              <strong>See <%= @trainer.name %>'s Pokedex</strong>
            </a>
          </div>
@@ -44,7 +44,7 @@
        <div class="navbar-item">
          <div class="buttons">
            <a class="button is-light">
-             Log Out
+             <%= link_to "Log Out", logout_path, method: :delete%>
            </a>
           </div>
         </div>

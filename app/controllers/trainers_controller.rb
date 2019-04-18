@@ -1,4 +1,7 @@
 class TrainersController < ApplicationController
+  # before_action :require_login
+  # skip_before_action :require_login, only: [:new]
+
   def index
     @trainers = Trainer.all
   end
@@ -16,7 +19,6 @@ class TrainersController < ApplicationController
     end
     @trainer.num_badges = 0
     if @trainer.save
-
       redirect_to @trainer
     else
       render :new
@@ -51,5 +53,9 @@ class TrainersController < ApplicationController
   def trainer_params
     params.require(:trainer).permit(:name, :bio, :profile_img, :password)
   end
+
+  # def require_login
+  #   return head(:forbidden) unless session.include? :user_id
+  # end
 
 end

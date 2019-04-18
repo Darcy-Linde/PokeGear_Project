@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="section">
+    <img src=<%= @wild_pokemon.img %>>
+  </div>
+
+  <%= form_for @pokemon do |f| %>
+    <div class="section">
+      <%= f.label "Catch #{@wild_pokemon.name}?" %>
+      <div>
+        <%= f.select :nick_name, ['Yes', 'No'] %>
+      </div>
+    </div>
+    <%= f.hidden_field :wild_pokemon_id, :value => @wild_pokemon.id %>
+    <div class="section">
+      <%= f.submit "DO THE THING" %>
+    </div>
+  <% end %>
+
+</div>
