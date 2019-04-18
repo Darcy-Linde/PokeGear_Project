@@ -4,7 +4,7 @@
   </div>
 
   <div class="container">
-    <p class="text-danger text-center">Login to catch new Pokemon! <br/></p>
+    <p class="text-danger text-center">Login to catch new Pokemon!<br/></p>
     <div class="panel-group">
       <div class="panel panel-default">
         <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading"><%= label_tag("Name") %>
@@ -18,15 +18,40 @@
     </div>
   </div>
   <%= submit_tag("Login") %>
-  <h3> <%= link_to "Make a new trainer!", new_trainer_path %> </h3>
 
+
+  <h2> <%= link_to "Make a new trainer!", new_trainer_path %> </h2><br/>
+
+
+  <h1> LEADERBOARD </h1>
+
+  <head>
+  <style>
+  table {
+    border-collapse: collapse;
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+  </style>
+  </head>
   <table class="table">
     <thead>
       <tr>
         <th>Trainer</th>
-        <th>Name</th>
-        <th>Badges</th>
+        <th></th>
+        <th>Number of Badges</th>
       </tr>
     </thead>
+
+
+    <% @sorted.each do |trainer| %>
+      <tr>
+        <td class="is-vertical-center"><%= trainer.name %></td>
+        <td><img src=<%= trainer.profile_img %> height="70" width="70"></td>
+        <td><%= trainer.num_badges%></td>
+      </tr>
+    <% end %>
 
   <% end %>

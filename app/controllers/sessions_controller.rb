@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
 
   def new
+    @sorted = Trainer.order(num_badges: :desc).limit(5)
+
   end
 
   def create
@@ -17,10 +19,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     redirect_to login_path
-  end
-
-  def top_five_leaderboards
-    
   end
 
 
