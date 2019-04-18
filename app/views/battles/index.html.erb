@@ -1,0 +1,64 @@
+<div class="container">
+  <section class="hero is-small has-background-primary	">
+    <div class="hero-body">
+        <h1 class="title has-text-black">
+          Welcome to <%= @gym.name %> !
+        </h1>
+    </div>
+  </section>
+
+  <div class="tile is-parent">
+     <article class="tile is-child notification is-light">
+       <div class="content">
+         <strong><%= @gym.before_quote %></strong>
+       </div>
+     </article>
+   </div>
+
+   <div class="tile is-parent">
+      <article class="tile is-child notification is-light">
+        <div class="content">
+          <section>
+            <strong>
+              Correctly answer <%= @gym.leader_name %>'s <%= @gym.number_of_questions %> questions to win!
+            </strong>
+          </section>
+
+          <section>
+            <strong><%= Trainer.find(current_user.id).name %></strong>
+            <img src="<%= Trainer.find(current_user.id).profile_img %>">
+            <strong>V.S.</strong>
+            <img src="<%= @gym.leader_img %>">
+            <strong><%= @gym.leader_name %></strong>
+            <img src="<%= @gym.badge_img %>">
+          </section>
+
+        </div>
+      </article>
+    </div>
+
+  <div class="container">
+    <section>
+     <nav class="navbar">
+         <div class="navbar-item">
+           <div class="buttons">
+             <a class="button is-info">
+               <%= link_to "Return to Trainer Profile", trainer_path(current_user) %>
+             </a>
+           </div>
+       </div>
+
+       <nav class="navbar">
+           <div class="navbar-item">
+             <div class="buttons">
+               <a href="/battles/new" class="button is-warning">
+                 <strong>Challenge Gym</strong>
+               </a>
+             </div>
+         </div>
+
+     </nav>
+    </section>
+    </div>
+
+</div>
