@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_154531) do
   create_table "owned_pokemons", force: :cascade do |t|
     t.integer "wild_pokemon_id"
     t.integer "trainer_id"
-    t.boolean "catch"
+    t.boolean "nick_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
