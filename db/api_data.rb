@@ -40,6 +40,7 @@ end
 def seed_gyms_table(hash)
   hash.each do |key, value|
     Gym.create(
+      index: value[:index],
       name: value[:name],
       badge_name: value[:badge_name],
       badge_img: value[:badge_img],

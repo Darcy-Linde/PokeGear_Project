@@ -1,6 +1,7 @@
 class GymsController < ApplicationController
   def index
-    @gyms = Gym.all
+    gym = Trainer.find(current_user.id).num_badges + 1
+    @gym = Gym.find(gym)
   end
 
   def show

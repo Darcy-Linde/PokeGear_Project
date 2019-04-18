@@ -9,6 +9,7 @@ Trivium.delete_all
 
 gyms_hash = {
   gym_1: {
+    index: 1,
     name: "Pewter City Gym",
     badge_name: "Boulder Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/d/dd/Boulder_Badge.png/50px-Boulder_Badge.png",
@@ -19,6 +20,7 @@ gyms_hash = {
     number_of_questions: 2
   },
   gym_2: {
+    index: 2,
     name: "Cerulean City Gym",
     badge_name: "Cascade Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/9/9c/Cascade_Badge.png/50px-Cascade_Badge.png",
@@ -29,6 +31,7 @@ gyms_hash = {
     number_of_questions: 2
   },
   gym_3: {
+    index: 3,
     name: "Vermilion City Gym",
     badge_name: "Thunder Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/a/a6/Thunder_Badge.png/50px-Thunder_Badge.png",
@@ -39,6 +42,7 @@ gyms_hash = {
     number_of_questions: 3
   },
   gym_4: {
+    index: 4,
     name: "Celadon City Gym",
     badge_name: "Rainbow Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/b/b5/Rainbow_Badge.png/50px-Rainbow_Badge.png",
@@ -49,6 +53,7 @@ gyms_hash = {
     number_of_questions: 3
   },
   gym_5: {
+    index: 5,
     name: "Fuchsia City Gym",
     badge_name: "Soul Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/7/7d/Soul_Badge.png/50px-Soul_Badge.png",
@@ -59,6 +64,7 @@ gyms_hash = {
     number_of_questions: 4
   },
   gym_6: {
+    index: 6,
     name: "Saffron City Gym",
     badge_name: "Marsh Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/6/6b/Marsh_Badge.png/50px-Marsh_Badge.png",
@@ -69,6 +75,7 @@ gyms_hash = {
     number_of_questions: 4
   },
   gym_7: {
+    index: 7,
     name: "Cinnabar Island Gym",
     badge_name: "Volcano Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/1/12/Volcano_Badge.png/50px-Volcano_Badge.png",
@@ -79,6 +86,7 @@ gyms_hash = {
     number_of_questions: 4
   },
   gym_8: {
+    index: 8,
     name: "Viridian City Gym",
     badge_name: "Earth Badge",
     badge_img: "https://cdn.bulbagarden.net/upload/thumb/7/78/Earth_Badge.png/50px-Earth_Badge.png",

@@ -1,6 +1,7 @@
 class CreateGyms < ActiveRecord::Migration[5.2]
   def change
     create_table :gyms do |t|
+      t.integer :index
       t.string :name
       t.string :badge_name
       t.string :badge_img
