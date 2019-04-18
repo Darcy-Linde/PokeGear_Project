@@ -54,6 +54,8 @@ class TrainersController < ApplicationController
     params.require(:trainer).permit(:name, :bio, :profile_img, :password)
   end
 
+
+
   # def require_login
   #   return head(:forbidden) unless session.include? :user_id
   # end
