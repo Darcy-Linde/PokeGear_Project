@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2019_04_17_154531) do
   end
 
   create_table "gyms", force: :cascade do |t|
-    t.integer "index"
     t.string "name"
     t.string "badge_name"
     t.string "badge_img"
@@ -37,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_154531) do
   create_table "owned_pokemons", force: :cascade do |t|
     t.integer "wild_pokemon_id"
     t.integer "trainer_id"
-    t.boolean "nick_name"
+    t.string "nick_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

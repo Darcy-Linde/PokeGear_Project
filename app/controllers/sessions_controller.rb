@@ -19,4 +19,8 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 
+  def top_five_leaderboards
+  end 
+
+
 end

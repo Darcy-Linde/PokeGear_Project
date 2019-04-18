@@ -11,12 +11,22 @@
         <%= text_field_tag("name") %></div></div>
         <div class="panel panel-default">
           <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading">  <div class="panel-heading"><%= label_tag("Password") %>
-            <%= password_field_tag("password") %></div></div>
+            <%= password_field_tag("password") %></div><br/>
+
+          </div>
       </div>
     </div>
   </div>
-
   <%= submit_tag("Login") %>
   <h3> <%= link_to "Make a new trainer!", new_trainer_path %> </h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Trainer</th>
+        <th>Name</th>
+        <th>Badges</th>
+      </tr>
+    </thead>
 
   <% end %>
