@@ -4,6 +4,7 @@ class CreateBattles < ActiveRecord::Migration[5.2]
       t.string :trainer_id
       t.string :gym_id
       t.integer :current_question_id
+      t.string :answer_submission
       t.integer :correct_answer_count
       t.integer :incorrect_answer_count
       t.boolean :victory

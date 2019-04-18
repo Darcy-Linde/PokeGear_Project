@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_154531) do
     t.string "trainer_id"
     t.string "gym_id"
     t.integer "current_question_id"
+    t.string "answer_submission"
     t.integer "correct_answer_count"
     t.integer "incorrect_answer_count"
     t.boolean "victory"

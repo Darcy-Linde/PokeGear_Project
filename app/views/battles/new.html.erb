@@ -51,14 +51,13 @@
   <%= form_for @battle do |f| %>
     <div class="section">
       <%= f.label "Select your answer" %>
-      <%= f.select :name, [
+      <%= f.select :answer_submission, [
        @question.correct_answer,
        @question.incorrect_answer_1,
        @question.incorrect_answer_2,
        @question.incorrect_answer_3
       ]%>
     </div>
-
     <div class="section">
       <%= f.submit "Submit Answer" %>
     </div>

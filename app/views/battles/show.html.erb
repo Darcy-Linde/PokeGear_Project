@@ -1,0 +1,66 @@
+<div class="container">
+  <section class="hero is-small has-background-warning	">
+    <div class="hero-body">
+        <h1 class="title has-text-black">
+          Battling <%= @gym.leader_name %> for the <%= @gym.badge_name %>
+        </h1>
+    </div>
+  </section>
+
+  <section>
+    <strong><%= Trainer.find(current_user.id).name %></strong>
+    <img src="<%= Trainer.find(current_user.id).profile_img %>">
+    <strong>V.S.</strong>
+    <img src="<%= @gym.leader_img %>">
+    <strong><%= @gym.leader_name %></strong>
+    <img src="<%= @gym.badge_img %>">
+  </section>
+
+  <div class="tile is-parent">
+     <article class="tile is-child notification is-warning">
+       <p class="title"><strong>Question: </strong></p>
+       <div class="content">
+         <strong><%= @question.question %></strong>
+       </div>
+     </article>
+   </div>
+
+    <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= @question.correct_answer %></p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= @question.incorrect_answer_1 %></p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= @question.incorrect_answer_2 %></p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"><%= @question.incorrect_answer_3 %></p>
+      </article>
+    </div>
+  </div>
+
+  <%= form_for @battle do |f| %>
+    <div class="section">
+      <%= f.label "Select your answer" %>
+      <%= f.select :answer_submission, [
+       @question.correct_answer,
+       @question.incorrect_answer_1,
+       @question.incorrect_answer_2,
+       @question.incorrect_answer_3
+      ]%>
+    </div>
+    <div class="section">
+      <%= f.submit "Submit Answer" %>
+    </div>
+  <% end %>
+
+</div>
