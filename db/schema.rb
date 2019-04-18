@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_154531) do
   create_table "battles", force: :cascade do |t|
     t.string "trainer_id"
     t.string "gym_id"
+    t.integer "answer_count"
     t.boolean "victory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
