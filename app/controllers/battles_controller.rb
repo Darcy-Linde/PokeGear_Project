@@ -1,4 +1,9 @@
 class BattlesController < ApplicationController
+
+  def index
+    @gym = Gym.find_by(index: current_user.num_badges + 1)
+  end
+
   def show
   end
 

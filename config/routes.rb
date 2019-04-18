@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :trainers
   resources :owned_pokemons, only: [:index, :new, :create]
   resources :wild_pokemons, only: [:index, :show]
-  resources :battles, only: [:show, :new, :create, :edit, :update]
+  resources :battles, only: [:index, :show, :new, :create, :edit, :update]
   resources :gyms, only: [:index, :show]
 
   get '/login', to: 'sessions#new', as: 'login'
