@@ -58,6 +58,7 @@
        @question.incorrect_answer_3
       ]%>
     </div>
+    <%= f.hidden_field :current_question_id, :value => @question.id %>
     <div class="section">
       <%= f.submit "Submit Answer" %>
     </div>
