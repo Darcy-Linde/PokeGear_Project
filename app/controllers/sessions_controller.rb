@@ -20,7 +20,8 @@ class SessionsController < ApplicationController
   end
 
   def top_five_leaderboards
-  end 
+    
+  end
 
 
 end
