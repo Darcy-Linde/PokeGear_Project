@@ -1,4 +1,6 @@
 class TrainersController < ApplicationController
+  before_action :require_login
+
   def index
     @trainers = Trainer.all
   end
@@ -49,6 +51,10 @@ class TrainersController < ApplicationController
 
   def trainer_params
     params.require(:trainer).permit(:name, :bio, :profile_img, :password)
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 
 end

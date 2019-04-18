@@ -6,7 +6,8 @@ class OwnedPokemonsController < ApplicationController
 
   def new
     @pokemon = OwnedPokemon.new
-    @wild_pokemon = WildPokemon.find(rand(1..151))
+    first_id = WildPokemon.first.id
+    @wild_pokemon = WildPokemon.find(rand(first_id..(first_id + 151)))
   end
 
   def create

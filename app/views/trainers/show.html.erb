@@ -33,7 +33,7 @@
      <div class="navbar">
        <div class="navbar-item">
          <div class="buttons">
-           <a href="/owned_pokemons/show" class="button is-info">
+           <a href="/owned_pokemons/" class="button is-info">
              <strong>See <%= @trainer.name %>'s Pokedex</strong>
            </a>
          </div>
@@ -43,8 +43,8 @@
      <div class="navbar-end">
        <div class="navbar-item">
          <div class="buttons">
-           <a class="button is-light">
-             Log Out
+           <a href="/sessions/destroy" class="button is-light">
+             <%= link_to "Log Out", login_path, method: :destroy %>
            </a>
           </div>
         </div>
