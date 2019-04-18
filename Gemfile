@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #parse api data
 gem 'rest-client'
 gem 'json'
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'

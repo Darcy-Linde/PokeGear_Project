@@ -1,12 +1,22 @@
-<% if @error %>
-  <p style="color: red"><%= @error %></p>
-<% end %>
 
-<%= form_tag(login_path) do %>
-  <%= label_tag("Name") %>
-  <%= text_field_tag("name") %>
-  <%= label_tag("Password") %>
-  <%= password_field_tag("password") %>
+
+  <%= form_tag(login_path) do %>
+  </div>
+
+  <div class="container">
+    <p class="text-danger"><h1 class="text-center">Login to catch new Pokemon!.</h1> <br/></p>
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading"><%= label_tag("Name") %>
+        <%= text_field_tag("name") %></div></div>
+        <div class="panel panel-default">
+          <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading">  <div class="panel-heading"><%= label_tag("Password") %>
+            <%= password_field_tag("password") %></div></div>
+      </div>
+    </div>
+  </div>
+
   <%= submit_tag("Login") %>
+  <h3> <%= link_to "Make a new trainer!", new_trainer_path %> </h3>
 
-<% end %>
+  <% end %>
