@@ -24,26 +24,31 @@
        </div>
      </article>
    </div>
+  <% array = @question.randomized_array %>
+  <% question_1 = array[0] %>
+  <% question_2 = array[1] %>
+  <% question_3 = array[2] %>
+  <% question_4 = array[3] %>
 
     <div class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title"><%= @question.correct_answer %></p>
+        <p class="title"><%= question_1 %></p>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title"><%= @question.incorrect_answer_1 %></p>
+        <p class="title"><%= question_2 %></p>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title"><%= @question.incorrect_answer_2 %></p>
+        <p class="title"><%= question_3 %></p>
       </article>
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box">
-        <p class="title"><%= @question.incorrect_answer_3 %></p>
+        <p class="title"><%= question_4 %></p>
       </article>
     </div>
   </div>
@@ -51,12 +56,7 @@
   <%= form_for @battle do |f| %>
     <div class="section">
       <%= f.label "Select your answer" %>
-      <%= f.select :answer_submission, [
-       @question.correct_answer,
-       @question.incorrect_answer_1,
-       @question.incorrect_answer_2,
-       @question.incorrect_answer_3
-      ]%>
+      <%= f.select :answer_submission, array %>
     </div>
     <%= f.hidden_field :current_question_id, :value => @question.id %>
     <div class="section">

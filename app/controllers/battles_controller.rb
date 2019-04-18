@@ -21,18 +21,23 @@ class BattlesController < ApplicationController
   end
 
   def create
-    @gym = Gym.find_by(index: current_user.num_badges + 1)
-    @battle = Battle.new(
-      trainer_id: current_user.id,
-      gym_id: @gym.id,
-      correct_answer_count: 0,
-      victory: true
-    )
-    @battle.save
-    @trainer = Trainer.find(current_user.id)
-    new_count = @trainer.num_badges + 1
-    @trainer.update(num_badges: new_count)
-    redirect_to trainer_path(current_user)
+    @question = Trivium.find(params[:battle][:current_question_id])
+    if @question.correct_answer == params[:battle][:answer_submission]
+      @gym = Gym.find_by(index: current_user.num_badges + 1)
+      @battle = Battle.new(
+        trainer_id: current_user.id,
+        gym_id: @gym.id,
+        correct_answer_count: 0,
+        victory: true
+      )
+      @battle.save
+      @trainer = Trainer.find(current_user.id)
+      new_count = @trainer.num_badges + 1
+      @trainer.update(num_badges: new_count)
+      redirect_to trainer_path(current_user)
+    else
+      redirect_to trainer_path(current_user)
+    end
   end
 
   def edit
