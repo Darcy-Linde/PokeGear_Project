@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
-
   def new
-    @sorted = Trainer.order(num_badges: :desc).limit(5)
-
+    @top_three = Trainer.order(num_badges: :desc).limit(5)
   end
 
   def create
+    # new
     @trainer = Trainer.find_by(name: params[:name])
+
     if @trainer && @trainer.authenticate(params[:password])
       session[:user_id] = @trainer.id
       redirect_to trainer_path(@trainer)
@@ -19,7 +19,5 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     redirect_to login_path
-  end
-
-
+end
 end
