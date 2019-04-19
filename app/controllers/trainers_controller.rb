@@ -27,7 +27,7 @@ class TrainersController < ApplicationController
     elsif @trainer.profile_img == "Bug Catcher"
       @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/b/b9/Spr_FRLG_Bug_Catcher.png"
     else
-      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/5/54/Spr_RS_Battle_Girl.png"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/1/12/Spr_E_Spenser.png"
     end
     @trainer.num_badges = 0
     if @trainer.save

@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # new
+    new
     @trainer = Trainer.find_by(name: params[:name])
 
     if @trainer && @trainer.authenticate(params[:password])
