@@ -1,29 +1,32 @@
 
-
   <%= form_tag(login_path) do %>
-  </div>
-
   <div class="container">
-    <p class="text-danger text-center">Login to catch new Pokemon!<br/></p>
-    <div class="panel-group">
-      <div class="panel panel-default">
-        <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading"><%= label_tag("Name") %>
-        <%= text_field_tag("name") %></div></div>
-        <div class="panel panel-default">
-          <div class="p-3 mb-2 bg-primary text-white"><div class="panel-heading">  <div class="panel-heading"><%= label_tag("Password") %>
-            <%= password_field_tag("password") %></div><br/>
-
-          </div>
+  <section>
+    <div class="tile is-parent">
+    <div class="tile is-4 is-vertical">
+      <article class="tile is-child notification is-info">
+      <div class="tile">
+        <strong><%= label_tag("Name") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+        <%= text_field_tag("name") %>
+      </div>
+       </article>
+       <article class="tile is-child notification is-info">
+      <div class="tile">
+        <strong><%= label_tag("Password") %>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+        <%= password_field_tag("password") %>
+      </div>
+      </article>
       </div>
     </div>
-  </div>
-  <%= submit_tag("Login") %>
+  </section>
+<%= submit_tag("Login") %>
+<h2> <%= link_to "Make a new trainer!", new_trainer_path %> </h2>
+</div>
 
+<br/>
 
-  <h2> <%= link_to "Make a new trainer!", new_trainer_path %> </h2><br/>
-
-
-  <h1> LEADERBOARD </h1>
+<div class="container">
+  <strong>LEADERBOARD</strong>
 
   <head>
   <style>
@@ -55,3 +58,4 @@
     <% end %>
 
   <% end %>
+</div>

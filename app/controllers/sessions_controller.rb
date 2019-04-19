@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    @sorted = Trainer.order(num_badges: :desc).limit(3)
+    @sorted = Trainer.order(num_badges: :desc).limit(5)
 
   end
 
