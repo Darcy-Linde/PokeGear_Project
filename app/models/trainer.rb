@@ -4,6 +4,8 @@ class Trainer < ApplicationRecord
   has_many :battles
   has_many :gyms, through: :battles
 
+  validates :name, uniqueness: true
+  
   has_secure_password
 
   def my_pokemon

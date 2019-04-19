@@ -12,10 +12,22 @@ class TrainersController < ApplicationController
 
   def create
     @trainer = Trainer.new(trainer_params)
-    if @trainer.profile_img == "Boy"
+    if @trainer.profile_img == "Red"
       @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/c/ca/Spr_FRLG_Red.png"
-    else
+    elsif @trainer.profile_img == "Green"
       @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/2/2b/Spr_FRLG_Leaf.png"
+    elsif @trainer.profile_img == "Brendan"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/6/68/Spr_RS_Brendan.png"
+    elsif @trainer.profile_img == "May"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/3/38/Spr_RS_May.png"
+    elsif @trainer.profile_img == "Youngster"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/d/d5/Spr_FRLG_Youngster.png"
+    elsif @trainer.profile_img == "Picnicker"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/a/a0/Spr_FRLG_Picnicker.png"
+    elsif @trainer.profile_img == "Bug Catcher"
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/b/b9/Spr_FRLG_Bug_Catcher.png"
+    else
+      @trainer.profile_img = "https://archives.bulbagarden.net/media/upload/5/54/Spr_RS_Battle_Girl.png"
     end
     @trainer.num_badges = 0
     if @trainer.save
