@@ -1,16 +1,26 @@
+<div class="container">
+  <section class="hero is-small has-background-danger">
+    <div class="hero-body">
+        <h1 class="title has-text-white">
+          Welcome to PokeNav
+        </h1>
+    </div>
+  </section>
+</div>
+
 
   <%= form_tag(login_path) do %>
   <div class="container">
   <section>
     <div class="tile is-parent">
     <div class="tile is-4 is-vertical">
-      <article class="tile is-child notification is-info">
+      <article class="tile is-child notification is-light">
       <div class="tile">
         <strong><%= label_tag("Name") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         <%= text_field_tag("name") %>
       </div>
        </article>
-       <article class="tile is-child notification is-info">
+       <article class="tile is-child notification is-light">
       <div class="tile">
         <strong><%= label_tag("Password") %>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         <%= password_field_tag("password") %>
