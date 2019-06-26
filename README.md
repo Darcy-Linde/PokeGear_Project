@@ -7,7 +7,7 @@ Catch all 151 original pokemon and earn badges by challenging gyms and solving t
 Run `bundle install` to install dependencies/gems<br>
 Install SQLite software (comes local on Mac)<br>
 Run `rails db:migrate` to create table migrations for database<br>
-Run `rails db:seed` to seed database with info from pokemon api
+Run `rails db:seed` to seed database with info from pokemon api<br>
 Run `rails s` to run server locally on port 3000
 Navigate to http://localhost:3000/login to begin!
 
