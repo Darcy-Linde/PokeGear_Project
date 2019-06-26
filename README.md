@@ -1,24 +1,24 @@
-# README
+# Pokenav
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Catch all 151 original pokemon and earn badges by challenging gyms and solving trivia questions<br>
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Run `bundle install` to install dependencies/gems<br>
+Install SQLite software (comes local on Mac)<br>
+Run `rails db:migrate` to create table migrations for database<br>
+Run `rails db:seed` to seed database with info from pokemon api
+Run `rails s` to run server locally on port 3000
+Navigate to http://localhost:3000/login to begin!
 
-* System dependencies
+## Built With
 
-* Configuration
+Ruby - language<br>
+Rails - Web application framework<br>
+Ruby bundler - Dependency/Gem Management<br>
+SQLite - SQL database<br>
+PokéAPI - A restful pokemon api - https://pokeapi.co/
 
-* Database creation
+## Authors
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Darcy Linde
